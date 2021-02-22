@@ -100,7 +100,8 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Set up basic HTML | H | 3hrs| hrs | hrs |
-| Add API into JS | H | 3hrs| hrs | hrs |
+| Add basic CSS styling/ borders | H | 3hrs| hrs | hrs |
+| Add API url into JS | H | 3hrs| hrs | hrs |
 | Add Try Catch | H | 3hrs| hrs | hrs |
 | Getting API to get data I want | H | 3hrs| hrs | hrs |
 | Add remove() to clear past search results | H | 3hrs| 2.5hrs | 2.5hrs |
