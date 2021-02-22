@@ -1,6 +1,6 @@
 # Project Overview
 
-## Project Name (Medical Marijuana Info)
+## Medical Marijuana Information Website
 
 [My deployed site]('insert url here as a string')
 The name of your project with deployed URL.
@@ -54,15 +54,24 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 #### MVP 
 *These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Explore The Strain API to see what info I can return
+- Link this API to my website
+- Set up basic HTML and CSS
+- Add Search bar with button where users will enter in name of strain
+- Display the name, race, and origin of any strain containing the word the user inputs
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
+
+- Link additional query in my api that brings more info on strain (effects and flavors)
+- I want the single search to bring back the name, race, origin, AND effects and flavors but I'm not sure how to link this
+- Link the ID of our search result strain to the URLs below so that it returns the effects and flavors
+- Example (from api website):
+	Additional Queries
+	Some of the search queries only return the strain with basic information and not effects or flavors. 	     These additional queries use the strain id to return its corresponding effect or flavor data.
+	strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
+	strainapi.evanbusse.com/API_KEY/strains/data/flavors/STRAIN_ID
+
 
 ## Project Schedule
 
