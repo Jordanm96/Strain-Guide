@@ -7,8 +7,7 @@ The name of your project with deployed URL.
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
-I will consume the Marijuana Strain API to allow users to look up the race (indica, sativa, hybrid) potential effects, flavors, and medicinal purposes of any marijuana strain they type in.
+I will utilize the Marijuana Strain API to allow users to look up any given strain of Marijuana and retrieve information about it. This information should include the name race (indica, sativa, or hybrid), and the origin of the strain. I would also like to add the positve effects and the medical effects, but I need to use an additional query and am not sure how to incorporate that at the moment.
 
 ## API and Data Sample
 
@@ -45,7 +44,7 @@ Specify the API you are using and include a link. Show us a snippet of JSON retu
 
 ## Wireframes
 
-[My Wireframe]('url')
+[My Wireframe]('https://wireframe.cc/AoMrsL')
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
 ### MVP/PostMVP
