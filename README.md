@@ -65,14 +65,13 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 - Link additional query in my api that brings more info on strain (effects and flavors)
 - I want the single search to bring back the name, race, origin, AND effects and flavors but I'm not sure how to link this
-- Link the ID of our search result strain to the URLs below so that it returns the effects and flavors
+- Link the ID of our search result strain to the URLs below so that it returns the effects
 - Example (from api website):
 	Additional Queries
-	Some of the search queries only return the strain with basic information and not effects or flavors. 	     These additional queries use the strain id to return its corresponding effect or flavor data.
+	Some of the search queries only return the strain with basic information and not effects. 	     	     These additional queries use the strain id to return its corresponding effect or flavor data.
 	strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
-	strainapi.evanbusse.com/API_KEY/strains/data/flavors/STRAIN_ID
-
-
+- Maybe include drop down. Ex. Search results brings up name only, click on it to see the race, origin, and effects
+- 
 ## Project Schedule
 
 This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
@@ -101,8 +100,13 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
+| Set up basic HTML | H | 3hrs| hrs | hrs |
+| Add API into JS | H | 3hrs| hrs | hrs |
+| Add Try Catch | H | 3hrs| hrs | hrs |
+| Getting API to get data I want | H | 3hrs| hrs | hrs |
+| Add remove() to clear past search results | H | 3hrs| 2.5hrs | 2.5hrs |
+| Collapse info into Name/Click to see info | H | 3hrs| 2.5hrs | 2.5hrs |
+| Add lots of CSS | H | 3hrs| 2.5hrs | 2.5hrs |
 | Total | H | 6hrs| 5hrs | 5hrs |
 
 ## Code Snippet
