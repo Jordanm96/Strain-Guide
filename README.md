@@ -52,13 +52,12 @@ Specify the API you are using and include a link. Show us a snippet of JSON retu
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
 - Explore The Strain API to see what info I can return
 - Link this API to my website
 - Set up basic HTML and CSS
 - Add Search bar with button where users will enter in name of strain
-- Display the name, race, and origin of any strain containing the word the user inputs
+- Display the name, race, origin and effects of any strain containing the keyword the user inputs
 
 #### PostMVP  
 
