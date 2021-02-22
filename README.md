@@ -107,7 +107,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Add remove() to clear past search results | H | 3hrs| 2.5hrs | 2.5hrs |
 | Collapse info into Name/Click to see info | H | 3hrs| 2.5hrs | 2.5hrs |
 | Add lots of CSS | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Total | H | 21hrs| hrs | hrs |
 
 ## Code Snippet
 
