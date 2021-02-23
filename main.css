@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  border: red solid 2px;
+}
+
+body {
+  background-color: lightsteelblue;
+}
+
+header{
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+input {
+  padding: 6px;
+  margin: 5px;
+  border-radius: 10%;
+}
+#go {
+  border-radius: 20%;
+}
+
+.bothDivs{
+  display: flex;
+
+}
+
+.search-column {
+  text-align: left;
+  width: 250px;
+  min-height: 500px;
+}
+
+.search-results{
+  text-align: top left;
+  flex: 1;
+}
