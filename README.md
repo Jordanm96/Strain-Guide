@@ -6,7 +6,7 @@
 
 ## Project Description
 
-I will utilize the Marijuana Strain API to allow users to look up any given strain of Marijuana and retrieve information about it. This information should include the full name and the race (indica, sativa, or hybrid). Upon clicking one of the results given by the user's search, the effects of that strain will be displayed as well.
+I will utilize the Marijuana Strain API to allow users to look up any given strain of Marijuana and retrieve information about it. This information should include the full name and the race (indica, sativa, or hybrid). Upon clicking one of the results given by the user's search, the effects of that strain will be displayed as well. My website should be used for mainly to gather medicinal information on various strains of cannabis so the user is able to get the strain they need to help them with various medical conditions.
 
 ## API and Data Sample
 
