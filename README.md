@@ -104,7 +104,7 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 
 ## Priority Matrix
 
-[Priority Matrix Image](https://imgur.com/HnLxbnU)
+[Priority Matrix Image](https://imgur.com/Ym0CawK)
 
 ## Timeframes
 
