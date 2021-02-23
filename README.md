@@ -49,7 +49,7 @@ Specify the API you are using and include a link. Show us a snippet of JSON retu
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
 
@@ -57,20 +57,16 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Link this API to my website
 - Set up basic HTML and CSS
 - Add Search bar with button where users will enter in name of strain
-- Display the name, race, origin and effects of any strain containing the keyword the user inputs
+- Display the name and race of the strain the user inputs with first API url
+- Display the effects of that strain upon clcking with a second API url
+---- Link additional query in my api that brings more info on strain (effects)
+---- 
 
 #### PostMVP  
 
+- Maybe include drop down. Ex. Search results brings up name only, click on it to see the race, and effects
+- Include button at bottom for user to search nearby medicinal dispensaries
 
-- Link additional query in my api that brings more info on strain (effects and flavors)
-- I want the single search to bring back the name, race, origin, AND effects and flavors but I'm not sure how to link this
-- Link the ID of our search result strain to the URLs below so that it returns the effects
-- Example (from api website):
-	Additional Queries
-	Some of the search queries only return the strain with basic information and not effects. 	     	     These additional queries use the strain id to return its corresponding effect or flavor data.
-	strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
-- Maybe include drop down. Ex. Search results brings up name only, click on it to see the race, origin, and effects
-- 
 ## Project Schedule
 
 This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
@@ -79,7 +75,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Feb 22-23| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|Feb 22-23| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Feb 23| Project Approval | Incomplete
 |Feb 24| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Feb 24| Pseudocode / actual code | Incomplete
@@ -99,13 +95,15 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Set up basic HTML/CSS borders/JS frame with API | H | 3hrs| hrs | hrs |
+| Set up basic HTML/CSS borders/JS frame with API | H | 1.5hrs| hrs | hrs |
 | Add Try/Catch/get axios/async/await | H | 3hrs| hrs | hrs |
-| Getting API to get data I want | H | 3hrs| hrs | hrs |
-| Add remove() to clear past search results | H | 3hrs| 2.5hrs | 2.5hrs |
-| Collapse info into Name/Click to see info | H | 3hrs| 2.5hrs | 2.5hrs |
-| Add lots of CSS | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 21hrs| hrs | hrs |
+| Getting API to get data I want | H | 2hrs| hrs | hrs |
+| Getting second API to get data I want | H | 2hrs| hrs | hrs |
+| Linking the second API using strain ID from first API | H | 3hrs| hrs | hrs |
+| Add remove() to clear past search results | H | 2hrs| hrs | hrs |
+| Collapse info into Name/Click to see info | H | 1hrs| hrs | hrs |
+| Add lots of CSS | H | 4hrs| hrs | hrs |
+| Total | H | 19hrs| hrs | hrs |
 
 ## Code Snippet
 
