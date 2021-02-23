@@ -134,8 +134,11 @@ Time frames are also key in the development cycle.  You have limited time to cod
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+function removeStrain() {
+  const strainContainer = document.querySelector('.strain-list')
+  while (strainContainer.lastChild) { //We are grabbing the 'lastChild' which is the strain we just looked up
+    strainContainer.removeChild(strainContainer.lastChild) //remove child is going to remove the LAST child from that strain container
+  }
 }
 ```
 
