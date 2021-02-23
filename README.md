@@ -11,7 +11,6 @@ I will utilize the Marijuana Strain API to allow users to look up any given stra
 ## API and Data Sample
 
 strainapi.evanbusse.com/API_KEY/strains/search/all
-strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 
 ```
 Afpak: {
@@ -42,7 +41,29 @@ medical: [
 }
 },
 ```
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
+
+```
+{
+    "positive": [
+        "Relaxed",
+        "Happy",
+        "Hungry",
+        "Sleepy"
+    ],
+    "negative": [
+        "Dizzy"
+    ],
+    "medical": [
+        "Depression",
+        "Stress",
+        "Lack Of Appetite",
+        "Insomnia",
+        "Pain"
+    ]
+}
+```
+
 
 ## Wireframes
 
