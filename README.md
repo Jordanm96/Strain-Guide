@@ -1,9 +1,8 @@
 # Project Overview
 
-## Medical Marijuana Information Website
+## Project Name
 
-[My deployed site]('insert url here as a string')
-The name of your project with deployed URL.
+[Medical Marijuna Strain Guide]()
 
 ## Project Description
 
