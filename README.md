@@ -88,6 +88,7 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 
 - Add a click event to display the effects of the displayed strain when clicked
 - Link additional query in my api that brings more info on strain (effects)
+- Include flavors of strains in my search results
 - Incorporate a dropdown effect for our search results (display name of strain only, display additional info when strain is clicked)
 - Add additional API call to search for nearby medical dispensaries
 
