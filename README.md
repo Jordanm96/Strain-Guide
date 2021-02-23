@@ -7,7 +7,7 @@ The name of your project with deployed URL.
 
 ## Project Description
 
-I will utilize the Marijuana Strain API to allow users to look up any given strain of Marijuana and retrieve information about it. This information should include the name race (indica, sativa, or hybrid), and the origin of the strain. I would also like to add the positve effects and the medical effects, but I need to use an additional query and am not sure how to incorporate that at the moment.
+I will utilize the Marijuana Strain API to allow users to look up any given strain of Marijuana and retrieve information about it. This information should include the full name and the race (indica, sativa, or hybrid). Upon clicking one of the results given by the user's search, the effects of that strain will be displayed as well.
 
 ## API and Data Sample
 
@@ -64,12 +64,11 @@ Carefully decided what is placed into your MVP as the client will expect this fu
 
 #### PostMVP  
 
+- Include 3rd API call for the flavors of each strain (Should be similar method to effects API)
 - Maybe include drop down. Ex. Search results brings up name only, click on it to see the race, and effects
 - Include button at bottom for user to search nearby medicinal dispensaries
 
 ## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
 
 You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
