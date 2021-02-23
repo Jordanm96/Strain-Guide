@@ -10,6 +10,9 @@ I will utilize the Marijuana Strain API to allow users to look up any given stra
 
 ## API and Data Sample
 
+strainapi.evanbusse.com/API_KEY/strains/search/all
+strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
+
 ```
 Afpak: {
 id: 1,
