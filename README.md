@@ -93,8 +93,6 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 
 ## Project Schedule
 
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
 |  Day | Deliverable | Status
 |---|---| ---|
 |Feb 22-23| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
@@ -107,7 +105,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Priority Matrix
 
-[Priority Matrix Image](https://imgur.com/a/sdq287Q)
+[Priority Matrix Image](https://imgur.com/HnLxbnU)
 
 ## Timeframes
 
