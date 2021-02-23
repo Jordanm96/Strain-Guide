@@ -82,9 +82,9 @@ Carefully decided what is placed into your MVP as the client will expect this fu
 - Add Search bar with button where users will enter in name of strain
 - Display the name and race of the strain the user inputs with first API url
 - Display the effects of that strain upon clcking with a second API url using strain_id
----- Link additional query in my api that brings more info on strain (effects)
----- 
+--- Link additional query in my api that brings more info on strain (effects)
 - Styled using Flexbox
+---- 
 
 
 #### PostMVP  
