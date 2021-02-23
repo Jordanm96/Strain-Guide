@@ -73,9 +73,7 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 ### MVP/PostMVP
 
 #### MVP 
-
-- Explore The Strain API to see what info I can return
-- Link this API to my website
+- Use external API to render data
 - Set up basic HTML and CSS
 - Implement search bar that renders the name, race, and description of strain entered
 - Create button for search bar
@@ -86,11 +84,10 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 
 #### PostMVP  
 
-- Add a click event to display the effects of the displayed strain when clicked
 - Link additional query in my api that brings more info on strain (effects)
 - Include flavors of strains in my search results
-- Incorporate a dropdown effect for our search results (display name of strain only, display additional info when strain is clicked)
-- Add additional API call to search for nearby medical dispensaries
+- Incorporate a dropdown/click event for our search results (display name of strain only, display additional info (effects) when strain is clicked)
+- Add additional API to search for nearby medical dispensaries
 
 ## Project Schedule
 
@@ -101,7 +98,8 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 |Feb 23| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Feb 23-24| Pseudocode / actual code | Incomplete
 |Feb 25| Initial Clickable Model  | Incomplete
-|Feb 26| MVP | Incomplete
+|Feb 25| MVP | Incomplete
+|Feb 26| PMVP/Finalize CSS | Incomplete
 |March 1| Presentations | Incomplete
 
 ## Priority Matrix
@@ -112,18 +110,19 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Set up HTML and add CSS borders | H | 3hrs| hrs | hrs |
-| Pseudocode/mapping JS | H | 3hrs| hrs | hrs |
+| Set up HTML | H | .5hrs| hrs | hrs |
+| Basic CSS skeleton | H | 2hrs| hrs | hrs |
+| Pseudocode/mapping JS | H | 1.5hrs| hrs | hrs |
 | Create error handling function with try/catch| H | 3hrs| hrs | hrs |
-| Link API to JS| H | 3hrs| hrs | hrs |
-| Working with API| H | 3hrs| hrs | hrs |
+| Working with API| H | 2hrs| hrs | hrs |
 | Link additional search query using strain ID gathered from first API request to JS | H | 3hrs| hrs | hrs |
-| Add event listeners | H | 3hrs| hrs | hrs |
+| Add event listeners | H | 1.5hrs| hrs | hrs |
 | Create dropdown display of search results | H | 3hrs| hrs | hrs |
 | CSS breakpoint | H | 3hrs| hrs | hrs |
-| CSS button styling | H | 3hrs| hrs | hrs |
+| CSS button styling | H | 1hr| hrs | hrs |
+| CSS general styling | H | 8hrs| hrs | hrs |
 | Testing | H | 3hrs| hrs | hrs |
-| Total | H | 33hrs| hrs | hrs |
+| Total | H | 31.5hrs| hrs | hrs |
 
 ## Code Snippet
 
