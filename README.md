@@ -116,18 +116,16 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 | Pseudocode/mapping JS | H | 3hrs| hrs | hrs |
 | Create error handling function with try/catch| H | 3hrs| hrs | hrs |
 | Link API to JS| H | 3hrs| hrs | hrs |
+| Working with API| H | 3hrs| hrs | hrs |
 | Link additional search query using strain ID gathered from first API request to JS | H | 3hrs| hrs | hrs |
 | Add event listeners | H | 3hrs| hrs | hrs |
 | Create dropdown display of search results | H | 3hrs| hrs | hrs |
 | CSS breakpoint | H | 3hrs| hrs | hrs |
 | CSS button styling | H | 3hrs| hrs | hrs |
-| CSS button animation | H | 3hrs| hrs | hrs |
 | Testing | H | 3hrs| hrs | hrs |
 | Total | H | 33hrs| hrs | hrs |
 
 ## Code Snippet
-
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
 ```
 function removeStrain() {
