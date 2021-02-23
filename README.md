@@ -112,7 +112,7 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Set up HTML/CSS borders/JS frame with API | H | 3hrs| hrs | hrs |
+| Set up HTML and add CSS borders | H | 3hrs| hrs | hrs |
 | Pseudocode/mapping JS | H | 3hrs| hrs | hrs |
 | Create error handling function with try/catch| H | 3hrs| hrs | hrs |
 | Link API to JS| H | 3hrs| hrs | hrs |
