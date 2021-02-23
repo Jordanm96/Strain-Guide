@@ -10,6 +10,7 @@ body {
 header{
   text-align: center;
   padding-bottom: 60px;
+  background-color: lightgreen;
 }
 
 input {
