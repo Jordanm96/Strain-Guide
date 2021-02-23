@@ -81,9 +81,11 @@ Carefully decided what is placed into your MVP as the client will expect this fu
 - Set up basic HTML and CSS
 - Add Search bar with button where users will enter in name of strain
 - Display the name and race of the strain the user inputs with first API url
-- Display the effects of that strain upon clcking with a second API url
+- Display the effects of that strain upon clcking with a second API url using strain_id
 ---- Link additional query in my api that brings more info on strain (effects)
 ---- 
+- Styled using Flexbox
+
 
 #### PostMVP  
 
@@ -99,8 +101,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |Feb 22-23| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Feb 23| Project Approval | Incomplete
-|Feb 24| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Feb 24| Pseudocode / actual code | Incomplete
+|Feb 23| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|Feb 23-24| Pseudocode / actual code | Incomplete
 |Feb 25| Initial Clickable Model  | Incomplete
 |Feb 26| MVP | Incomplete
 |March 1| Presentations | Incomplete
