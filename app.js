@@ -1,5 +1,5 @@
 const searchByNameUrl = "http://strainapi.evanbusse.com/jqekE0U/strains/search/name"
-const effectsUrl = "http://strainapi.evanbusse.com/jqekE0U/strains/data/effects"
+// const effectsUrl = "http://strainapi.evanbusse.com/jqekE0U/strains/data/effects"
 
 // Create Try/Catch
 const getStrainInfo = async (inputValue) => {
@@ -9,7 +9,7 @@ const getStrainInfo = async (inputValue) => {
     const response = await axios.get(url)
     const grabData = response.data
     grabData.forEach(grabData => {
-      // console.log(grabData.id)
+      console.log(grabData.id)
       displayStrainInfo(grabData)
     })
     return response
@@ -19,25 +19,24 @@ const getStrainInfo = async (inputValue) => {
 }
 getStrainInfo('blue dream')
 
-
-// * 
 // Create 2nd Try/Catch for effects by ID
 // async (`${grabData.id}`) the id gained from the for each is what I want to run the function with
-const getEffects = async (inputValue) => {
-  // const url = `${searchByNameUrl}/${inputValue}`
+const getEffects = async (id) => {
+  const effectsUrl = `http://strainapi.evanbusse.com/jqekE0U/strains/data/effects${id}`
   try {
-    getStrainInfo(grabData)
     // const eUrl = `${effectsUrl}/${grabData.id}`
     // const eUrl = `${effectsUrl}/326` //Manually putting in a number here gave me med,neg, and pos effect arrays
-    const eResponse = await axios.get(eUrl)
-    const positive = eResponse.data.positive
-    positive.forEach(positive => {
-      console.log(`Positive: ${positive}`)
-    })
-    const medical = eResponse.data.medical
-    medical.forEach(medical => {
-      console.log(`Medical: ${medical}`)
-    })
+    
+    const eResponse = await axios.get(effectsUrl)
+    console.log(eResponse)
+    // const positive = eResponse.data.positive
+    // positive.forEach(positive => {
+    //   console.log(`Positive: ${positive}`)
+    // })
+    // const medical = eResponse.data.medical
+    // medical.forEach(medical => {
+    //   console.log(`Medical: ${medical}`)
+    // })
 // these for each loops display each element of the positve and medical array for the id number we manually input
   // How can i get the id from the search into that eUrl?
     // I need to retrieve the id of the input value 
