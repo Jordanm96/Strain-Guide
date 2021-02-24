@@ -12,11 +12,15 @@ header{
   padding-bottom: 60px;
   background-color: lightgreen;
 }
+p {
+  font-size: 20px;
+}
 
 input {
   padding: 6px;
   margin: 5px;
   border-radius: 10%;
+  /* text-align: center; */
 }
 #go {
   border-radius: 20%;
@@ -27,13 +31,13 @@ input {
 
 }
 
-.search-column {
+.search-container {
   text-align: left;
-  width: 250px;
+  width: 25%;
   min-height: 500px;
 }
 
-.search-results{
+.strain-list {
   text-align: top left;
   flex: 1;
 }

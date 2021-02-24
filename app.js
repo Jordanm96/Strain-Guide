@@ -1,9 +1,9 @@
-const nameUrl = "http://strainapi.evanbusse.com/jqekE0U/strains/search/name"
+const searchByNameUrl = "http://strainapi.evanbusse.com/jqekE0U/strains/search/name"
 
 
 // Create Try/Catch
 const getStrainInfo = async (inputValue) => {
-  const url = `${nameUrl}/${inputValue}`
+  const url = `${searchByNameUrl}/${inputValue}`
   try {
     removeStrainSearch()
     const response = await axios.get(url)
@@ -33,6 +33,7 @@ searchBtn.addEventListener('click', (e) => {
 // Append the strain data to the div ('.search-results')
 function displayStrainInfo(grabData) {
   const strainList = document.querySelector('.strain-list')
+
   const strainInfo = `
   <div class = "strainStuff">
   <h1 class = "strainName">Name: ${grabData.name}</h1>
@@ -42,6 +43,7 @@ function displayStrainInfo(grabData) {
   `
 
   strainList.insertAdjacentHTML("beforeend", strainInfo)
+
 }
 // * In my p class I'd like to set a "No description available" if grabData.desc is null
 // * In my results class, I want it to read the index NUMBER of the names that were found 
