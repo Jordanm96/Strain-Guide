@@ -16,7 +16,6 @@ const getStrainInfo = async (inputValue) => {
     console.error(err)
   }
 }
-// getStrainInfo('strawberry')
 
 
 // Event Listener for Button
@@ -32,7 +31,7 @@ searchBtn.addEventListener('click', (e) => {
 
 // Append the strain data to the div ('.search-results')
 function displayStrainInfo(grabData) {
-  const strainList = document.querySelector('.strain-list')
+  const strainList = document.querySelector('.results-container')
 
   const strainInfo = `
   <div class = "strainStuff">
@@ -54,7 +53,7 @@ function displayStrainInfo(grabData) {
 // Remove the strain search from html
 // Don't forget to add this function into our try catch
 function removeStrainSearch() {
-  const strainContainer = document.querySelector('.strain-list')
+  const strainContainer = document.querySelector('.results-container')
   while (strainContainer.lastChild) {
     strainContainer.removeChild(strainContainer.lastChild)
   }

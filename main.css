@@ -9,8 +9,9 @@ body {
 
 header{
   text-align: center;
-  padding-bottom: 60px;
+  padding: 60px 0px;
   background-color: lightgreen;
+  width: 100%;
 }
 p {
   font-size: 20px;
@@ -37,7 +38,6 @@ input {
   min-height: 500px;
 }
 
-.strain-list {
-  text-align: top left;
-  flex: 1;
+.results-container {
+
 }
