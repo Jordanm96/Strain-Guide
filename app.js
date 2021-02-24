@@ -1,5 +1,5 @@
 const searchByNameUrl = "http://strainapi.evanbusse.com/jqekE0U/strains/search/name"
-
+const effectsUrl = "http://strainapi.evanbusse.com/jqekE0U/strains/data/effects"
 
 // Create Try/Catch
 const getStrainInfo = async (inputValue) => {
@@ -9,7 +9,7 @@ const getStrainInfo = async (inputValue) => {
     const response = await axios.get(url)
     const grabData = response.data
     grabData.forEach(grabData => {
-      console.log(grabData)
+      // console.log(grabData.id)
       displayStrainInfo(grabData)
     })
     return response
@@ -17,7 +17,37 @@ const getStrainInfo = async (inputValue) => {
     console.error(err)
   }
 }
+getStrainInfo('blue dream')
 
+
+// * 
+// Create 2nd Try/Catch for effects by ID
+// async (`${grabData.id}`) the id gained from the for each is what I want to run the function with
+const getEffects = async (inputValue) => {
+  // const url = `${searchByNameUrl}/${inputValue}`
+  try {
+    getStrainInfo(grabData)
+    // const eUrl = `${effectsUrl}/${grabData.id}`
+    // const eUrl = `${effectsUrl}/326` //Manually putting in a number here gave me med,neg, and pos effect arrays
+    const eResponse = await axios.get(eUrl)
+    const positive = eResponse.data.positive
+    positive.forEach(positive => {
+      console.log(`Positive: ${positive}`)
+    })
+    const medical = eResponse.data.medical
+    medical.forEach(medical => {
+      console.log(`Medical: ${medical}`)
+    })
+// these for each loops display each element of the positve and medical array for the id number we manually input
+  // How can i get the id from the search into that eUrl?
+    // I need to retrieve the id of the input value 
+  } catch (err) {
+    console.error(err)
+  }
+}
+getEffects()
+
+// const strainIDUrl = `${effectsUrl}/${grabData.id}`
 // Event Listener for Button
 
 const searchBtn = document.querySelector('#go')
@@ -35,21 +65,14 @@ function displayStrainInfo(grabData) {
 
   const strainInfo = `
   <div class = "strainStuff">
-  <h1 class = "strainName">${grabData.name}</h1>
-  <h3 class = "race">Species: ${grabData.race}</h3>
-  <p class = "description">Description: ${grabData.desc}</p>
-  <button id = "seeEffects">See effects</button>
-
-  <button id = "readMore">READ MORE</button>  
-    
-
-  
-  
+    <h1 class = "strainName">${grabData.name}</h1>
+    <h3 class = "race">Species: ${grabData.race}</h3>
+    <h4 class = "strainID"> ID: ${grabData.id}</h3>
+    <p class = "description">Description: ${grabData.desc}</p>
+    <button id = "seeEffects">See More Effects</button>
   </div>
   `
-
   strainList.insertAdjacentHTML("beforeend", strainInfo)
-
 }
 
 // * In my p class I'd like to set a "No description available" if grabData.desc is null
