@@ -1,62 +1,46 @@
-const searchByNameUrl = "http://strainapi.evanbusse.com/jqekE0U/strains/search/name"
-// const effectsUrl = "http://strainapi.evanbusse.com/jqekE0U/strains/data/effects"
+//Endpoint for strain name, id, race, and description: http://strainapi.evanbusse.com/jqekE0U/strains/search/name
+//Endpoint for effects by id: http://strainapi.evanbusse.com/jqekE0U/strains/data/effects
 
 // Create Try/Catch
 const getStrainInfo = async (inputValue) => {
+  const searchByNameUrl = "http://strainapi.evanbusse.com/jqekE0U/strains/search/name"
   const url = `${searchByNameUrl}/${inputValue}`
   try {
     removeStrainSearch()
     const response = await axios.get(url)
     const grabData = response.data
     grabData.forEach(grabData => {
-      console.log(grabData.id)
       displayStrainInfo(grabData)
+      getEffects(`${grabData.id}`)
+      // appendEffects()
     })
     return response
   } catch (err) {
     console.error(err)
   }
 }
-getStrainInfo('blue dream')
+// getStrainInfo()
 
 // Create 2nd Try/Catch for effects by ID
 // async (`${grabData.id}`) the id gained from the for each is what I want to run the function with
 const getEffects = async (id) => {
-  const effectsUrl = `http://strainapi.evanbusse.com/jqekE0U/strains/data/effects${id}`
+  const effectsUrl = `http://strainapi.evanbusse.com/jqekE0U/strains/data/effects/${id}`
   try {
-    // const eUrl = `${effectsUrl}/${grabData.id}`
-    // const eUrl = `${effectsUrl}/326` //Manually putting in a number here gave me med,neg, and pos effect arrays
-    
     const eResponse = await axios.get(effectsUrl)
-    console.log(eResponse)
-    // const positive = eResponse.data.positive
-    // positive.forEach(positive => {
-    //   console.log(`Positive: ${positive}`)
-    // })
-    // const medical = eResponse.data.medical
-    // medical.forEach(medical => {
-    //   console.log(`Medical: ${medical}`)
-    // })
-// these for each loops display each element of the positve and medical array for the id number we manually input
-  // How can i get the id from the search into that eUrl?
-    // I need to retrieve the id of the input value 
+    const positive = eResponse.data.positive
+    positive.forEach(positive => {
+      console.log(`Positive: ${positive}`)
+    })
+    const medical = eResponse.data.medical
+    medical.forEach(medical => {
+      console.log(`May help with: ${medical}`)
+    })
+    return eResponse
   } catch (err) {
     console.error(err)
   }
 }
-getEffects()
-
-// const strainIDUrl = `${effectsUrl}/${grabData.id}`
-// Event Listener for Button
-
-const searchBtn = document.querySelector('#go')
-searchBtn.addEventListener('click', (e) => {
-  e.preventDefault()
-  const userInput = document.querySelector('input').value
-  getStrainInfo(userInput)
-  document.querySelector('input').value = ""
-})
-
+// getEffects()
 
 // Append the strain data to the div ('.search-results')
 function displayStrainInfo(grabData) {
@@ -74,14 +58,42 @@ function displayStrainInfo(grabData) {
   strainList.insertAdjacentHTML("beforeend", strainInfo)
 }
 
-// * In my p class I'd like to set a "No description available" if grabData.desc is null
-// * In my results class, I want it to read the index NUMBER of the names that were found 
-// * Example: Displaying Results (22): grabData.length = undefined
+// Append the effects to the same results-container div (for now). Later append it to the see effects button.
+function appendEffects() {
+  const effectList = document.querySelector('.results-container')
+  const effectInfo = `
+  <h2 class = "positive">Positive: ${positive}</h2>
+  <h2 class = "medical">Medical: ${medical}</h2>
+  `
+  effectList.insertAdjacentHTML("beforeend", effectInfo)
+}
 
 
+// These loops are for gathering the positive/medical effects:
+// const positive = eResponse.data.positive
+    // positive.forEach(positive => {
+    //   console.log(`Positive: ${positive}`)
+    // })
+    // const medical = eResponse.data.medical
+    // medical.forEach(medical => {
+    //   console.log(`Medical: ${medical}`)
+    // })
 
+// Event Listener for "GO" Button
+const searchBtn = document.querySelector('#go')
+searchBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  const userInput = document.querySelector('input').value
+  getStrainInfo(userInput)
+  document.querySelector('input').value = ""
+})
+
+// Event Listener for "See More Effects" Button
+// const effectsBtn = document.querySelector('#seeEffects')
+// effectsBtn.addEventListener('click', (e) => {
+//   e.preventDefault()
+// })
 // Remove the strain search from html
-// Don't forget to add this function into our try catch
 function removeStrainSearch() {
   const strainContainer = document.querySelector('.results-container')
   while (strainContainer.lastChild) {
