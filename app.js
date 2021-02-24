@@ -25,14 +25,18 @@ const getStrainInfo = async (inputValue) => {
 // async (`${grabData.id}`) the id gained from the for each is what I want to run the function with
 const getEffects = async (id) => {
   const effectsUrl = `http://strainapi.evanbusse.com/jqekE0U/strains/data/effects/${id}`
+  const strainList = document.querySelector('.results-container')
+  const effectsList = document.querySelector('.strainStuff')
   try {
     const eResponse = await axios.get(effectsUrl)
     const positive = eResponse.data.positive
     positive.forEach(positive => {
+      effectsList.insertAdjacentHTML("beforeend", positive )
       console.log(`Positive: ${positive}`)
     })
     const medical = eResponse.data.medical
     medical.forEach(medical => {
+      effectsList.insertAdjacentHTML("beforeend", medical )
       console.log(`May help with: ${medical}`)
     })
     return eResponse
@@ -43,32 +47,41 @@ const getEffects = async (id) => {
 // getEffects()
 
 // Append the strain data to the div ('.search-results')
-function displayStrainInfo(grabData) {
+function displayStrainInfo(grabData, positive, medical) {
   const strainList = document.querySelector('.results-container')
-
+  
   const strainInfo = `
   <div class = "strainStuff">
     <h1 class = "strainName">${grabData.name}</h1>
-    <h3 class = "race">Species: ${grabData.race}</h3>
-    <h4 class = "strainID"> ID: ${grabData.id}</h3>
+    <h3 class = "race">Species: ${grabData.race}</h3>    
+    <h4 class = "positive">Positive: ${positive}</h4>
+    <h4 class = "medical">Medical: ${medical}</h4>
     <p class = "description">Description: ${grabData.desc}</p>
     <button id = "seeEffects">See More Effects</button>
   </div>
   `
+
   strainList.insertAdjacentHTML("beforeend", strainInfo)
 }
-
 // Append the effects to the same results-container div (for now). Later append it to the see effects button.
 function appendEffects() {
   const effectList = document.querySelector('.results-container')
   const effectInfo = `
-  <h2 class = "positive">Positive: ${positive}</h2>
-  <h2 class = "medical">Medical: ${medical}</h2>
+  <h4 class = "positive">Positive: ${positive}</h4>
+  <h4 class = "medical">Medical: ${medical}</h4>
   `
   effectList.insertAdjacentHTML("beforeend", effectInfo)
 }
-
-
+// function appendEffects {
+//   const fragment = new DocumentFragment()
+//   const div = document.createElement("div")
+//   div.innerHTML = `
+//   <h4 class = "positive">Positive: ${positive}</h4>
+//   <h4 class = "medical">Medical: ${medical}</h4>
+//   `
+//   fragment.appendChild(div)
+//   document.getElementsByClassName("strainStuff").appendChild(fragment)
+// }
 // These loops are for gathering the positive/medical effects:
 // const positive = eResponse.data.positive
     // positive.forEach(positive => {
