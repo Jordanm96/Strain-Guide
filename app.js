@@ -9,6 +9,7 @@ const getStrainInfo = async (inputValue) => {
     const response = await axios.get(url)
     const grabData = response.data
     grabData.forEach(grabData => {
+      console.log(grabData)
       displayStrainInfo(grabData)
     })
     return response
@@ -16,7 +17,6 @@ const getStrainInfo = async (inputValue) => {
     console.error(err)
   }
 }
-
 
 // Event Listener for Button
 
@@ -35,15 +35,23 @@ function displayStrainInfo(grabData) {
 
   const strainInfo = `
   <div class = "strainStuff">
-  <h1 class = "strainName">Name: ${grabData.name}</h1>
+  <h1 class = "strainName">${grabData.name}</h1>
   <h3 class = "race">Species: ${grabData.race}</h3>
-  <p class = "description"><strong>Description:</strong> ${grabData.desc}</p>
+  <p class = "description">Description: ${grabData.desc}</p>
+  <button id = "seeEffects">See effects</button>
+
+  <button id = "readMore">READ MORE</button>  
+    
+
+  
+  
   </div>
   `
 
   strainList.insertAdjacentHTML("beforeend", strainInfo)
 
 }
+
 // * In my p class I'd like to set a "No description available" if grabData.desc is null
 // * In my results class, I want it to read the index NUMBER of the names that were found 
 // * Example: Displaying Results (22): grabData.length = undefined
