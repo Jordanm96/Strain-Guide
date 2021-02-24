@@ -110,13 +110,13 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Set up HTML | H | .5hrs| hrs | hrs |
-| Basic CSS skeleton | H | 2hrs| hrs | hrs |
-| Pseudocode/mapping JS | H | 1.5hrs| hrs | hrs |
-| Create error handling function with try/catch| H | 3hrs| hrs | hrs |
-| Working with API| H | 2hrs| hrs | hrs |
+| Set up HTML | H | .5hrs| hrs | 1hrs |
+| Basic CSS skeleton | H | 2hrs| hrs | 2hrs |
+| Pseudocode/mapping JS | H | 1.5hrs| hrs | 2hrs |
+| Create error handling function with try/catch| H | 3hrs| hrs | 2hrs |
+| Working with API| H | 2hrs| hrs | 3hrs |
 | Link additional search query using strain ID gathered from first API request to JS | H | 3hrs| hrs | hrs |
-| Add event listeners | H | 1.5hrs| hrs | hrs |
+| Add event listeners | H | 1.5hrs| hrs | 1hrs |
 | Create dropdown display of search results | H | 3hrs| hrs | hrs |
 | CSS breakpoint | H | 3hrs| hrs | hrs |
 | CSS button styling | H | 1hr| hrs | hrs |
