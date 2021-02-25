@@ -25,7 +25,7 @@ const getStrainInfo = async (inputValue) => {
     console.error(err)
   }
 }
-// getStrainInfo('blue dream')
+getStrainInfo('blue dream')
 
 // Create 2nd Try/Catch for effects by ID
 const getEffects = async (id) => {
