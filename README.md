@@ -96,9 +96,9 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 |Feb 22-23| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Feb 23| Project Approval | Complete
 |Feb 23| Core Application Structure (HTML, CSS, etc.) | Complete
-|Feb 23-24| Pseudocode / actual code | Incomplete
-|Feb 25| Initial Clickable Model  | Incomplete
-|Feb 25| MVP | Incomplete
+|Feb 23-24| Pseudocode / actual code | Complete
+|Feb 25| Initial Clickable Model  | Complete
+|Feb 25| MVP | Complete
 |Feb 26| PMVP/Finalize CSS | Incomplete
 |March 1| Presentations | Incomplete
 
@@ -118,10 +118,10 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 | Link additional search query using strain ID gathered from first API request to JS | H | 3hrs| hrs | 7hrs |
 | Add event listeners | H | 1.5hrs| hrs | 1.5hrs |
 | Create button to display medical results | H | 3hrs| hrs | 3hrs |
-| CSS breakpoint | H | 3hrs| hrs | hrs |
-| CSS button styling | H | 1hr| hrs | hrs |
+| CSS breakpoint | H | 3hrs| hrs | 4hrs |
+| CSS button styling | H | 1hr| hrs | 2hrs |
 | CSS general styling | H | 8hrs| hrs | hrs |
-| Testing | H | 3hrs| hrs | hrs |
+| Testing | H | 3hrs| hrs | 5hrs |
 | Total | H | 31.5hrs| hrs | hrs |
 
 ## Code Snippet
