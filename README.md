@@ -94,8 +94,8 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 |  Day | Deliverable | Status
 |---|---| ---|
 |Feb 22-23| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|Feb 23| Project Approval | Incomplete
-|Feb 23| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|Feb 23| Project Approval | Complete
+|Feb 23| Core Application Structure (HTML, CSS, etc.) | Complete
 |Feb 23-24| Pseudocode / actual code | Incomplete
 |Feb 25| Initial Clickable Model  | Incomplete
 |Feb 25| MVP | Incomplete
@@ -115,9 +115,9 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 | Pseudocode/mapping JS | H | 1.5hrs| hrs | 2hrs |
 | Create error handling function with try/catch| H | 3hrs| hrs | 2hrs |
 | Working with API| H | 2hrs| hrs | 3hrs |
-| Link additional search query using strain ID gathered from first API request to JS | H | 3hrs| hrs | hrs |
-| Add event listeners | H | 1.5hrs| hrs | 1hrs |
-| Create dropdown display of search results | H | 3hrs| hrs | hrs |
+| Link additional search query using strain ID gathered from first API request to JS | H | 3hrs| hrs | 7hrs |
+| Add event listeners | H | 1.5hrs| hrs | 1.5hrs |
+| Create button to display medical results | H | 3hrs| hrs | 3hrs |
 | CSS breakpoint | H | 3hrs| hrs | hrs |
 | CSS button styling | H | 1hr| hrs | hrs |
 | CSS general styling | H | 8hrs| hrs | hrs |
@@ -136,4 +136,6 @@ function removeStrain() {
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+
+- Not using a dropdown effect, instead added a button to display medical use.
+
