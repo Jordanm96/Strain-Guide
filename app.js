@@ -18,14 +18,13 @@ const getStrainInfo = async (inputValue) => {
           const medicalUl = document.querySelector(`#medical${grabData.id}`) //Grab our UL (medical list) we made in displayStrainInfo function
           medicalUl.insertHTML(effects) //Here we are inserting our effects variable, which runs the id through the get effects function, into that empty UL
         })
-
     })
     return response
   } catch (err) {
     console.error(err)
   }
 }
-getStrainInfo('blue dream')
+// getStrainInfo('blue dream')
 
 // Create 2nd Try/Catch for effects by ID
 const getEffects = async (id) => {
