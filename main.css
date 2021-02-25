@@ -65,6 +65,13 @@ input {
 
 }
 
+.strainStuff {
+  padding: 20px;
+}
+.strainName {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 600px) {
   body{
     background-color: lightseagreen;
