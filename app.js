@@ -11,57 +11,53 @@ const getStrainInfo = async (inputValue) => {
     const grabData = response.data
     grabData.forEach(grabData => {
       displayStrainInfo(grabData)
-      getEffects(`${grabData.id}`)
-      // appendEffects()
+      const button = document.querySelector(`#seeEffects${grabData.id}`)
+      button.addEventListener('click', (e) => {
+        e.preventDefault()
+        const effects = getEffects(grabData.id)
+        const medicalUl = document.querySelector(`#medical${grabData.id}`)
+        medicalUl.insertHTML(effects)
+      })
     })
     return response
   } catch (err) {
     console.error(err)
   }
 }
-// getStrainInfo()
 
 // Create 2nd Try/Catch for effects by ID
-// async (`${grabData.id}`) the id gained from the for each is what I want to run the function with
 const getEffects = async (id) => {
   const effectsUrl = `http://strainapi.evanbusse.com/jqekE0U/strains/data/effects/${id}`
-  const effectsList = document.querySelector('.strainStuff')
-  // Here I will select my See more Effects button #seeEffects
   try {
     const eResponse = await axios.get(effectsUrl)
-    // const positive = eResponse.data.positive
-    // positive.forEach(positive => {
-    //   effectsList.insertAdjacentHTML("beforeend", positive )
-    //   console.log(`Positive: ${positive}`)
-    // })
     const medical = eResponse.data.medical
+    const effectDiv = document.querySelector(`#medical${id}`)
     medical.forEach(medical => {
-      effectsList.insertAdjacentHTML("beforeend", medical )
-      console.log(`May help with: ${medical}`)
+      const listItem = document.createElement('li')
+      const effectsText = document.createTextNode(`May help with: ${medical}`)
+      listItem.appendChild(effectsText)
+      effectDiv.appendChild(listItem)
     })
-    return eResponse
+    return effectDiv
   } catch (err) {
     console.error(err)
   }
 }
-// getEffects()
 
 // Append the strain data to the div ('.search-results')
 function displayStrainInfo(grabData) {
   const strainList = document.querySelector('.results-container')
-  
   const strainInfo = `
-  <div class = "strainStuff">
+  <div id = "strainStuff">
     <h1 class = "strainName">${grabData.name}</h1>
     <h3 class = "race">Species: ${grabData.race}</h3>    
     <p class = "description"><strong>Description:</strong> ${grabData.desc}</p>
-    <button id = "seeEffects">Click here for medicinal use!</button>
+    <button id="seeEffects${grabData.id}">Click here for medicinal use!</button>
+    <ul id = "medical${grabData.id}"></ul>
   </div>
   `
-
   strainList.insertAdjacentHTML("beforeend", strainInfo)
 }
-
 
 // Event Listener for "GO" Button
 const searchBtn = document.querySelector('#go')
@@ -72,13 +68,6 @@ searchBtn.addEventListener('click', (e) => {
   document.querySelector('input').value = ""
 })
 
-// Event Listener for "See More Effects" Button
-const effectsBtn = document.querySelector('#seeEffects')
-effectsBtn.addEventListener('click', (e) => {
-  e.preventDefault()
-  
-
-})
 // Remove the strain search from html
 function removeStrainSearch() {
   const strainContainer = document.querySelector('.results-container')
