@@ -14,7 +14,7 @@ const getStrainInfo = async (inputValue) => {
         const button = document.querySelector(`#seeEffects${grabData.id}`) //Grab our medical button
         button.addEventListener('click', (e) => {
           e.preventDefault()
-          const effects = getEffects(grabData.id) //This is plugging in our getEffects function and adding the id gathered from first api call
+          const effects = getEffects(grabData.id) //This is using the ID from first api call and adding it to this button (button#seeEffects${id})
           const medicalUl = document.querySelector(`#medical${grabData.id}`) //Grab our UL (medical list) we made in displayStrainInfo function
           medicalUl.insertHTML(effects) //Here we are inserting our effects variable, which runs the id through the get effects function, into that empty UL
         })
@@ -22,6 +22,10 @@ const getStrainInfo = async (inputValue) => {
     return response
   } catch (err) {
     console.error(err)
+    // let errorMessage = document.createElement('h1')
+    // errorMessage.textContent = "There is no current info on this strain. Please enter another name and try again."
+    // let results = document.querySelector(".results-container")
+    // document.results.append(errorMessage)
   }
 }
 // getStrainInfo('blue dream')
@@ -85,3 +89,11 @@ function removeStrainSearch() {
     strainContainer.removeChild(strainContainer.lastChild)
   }
 }
+
+//I want a function so the button only runs once when clicked and won't work again after that
+// function removeMedical() {
+//   const medicalContainer = document.querySelector('#medical')
+//   while (medicalContainer.lastChild) {
+//     medicalContainer.removeChild(medicalContainer.lastChild)
+//   }
+// }
