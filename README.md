@@ -88,6 +88,7 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 - Include a function for null results .Just added this
 - Include flavors of strains in my search results
 - Incorporate a dropdown/click event for our search results (display name of strain only, display additional info (effects) when strain is clicked)
+- Add age verification pop-up
 - Add additional API to search for nearby medical dispensaries
 
 ## Project Schedule

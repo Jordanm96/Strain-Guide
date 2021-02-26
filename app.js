@@ -4,7 +4,7 @@
 // Create Try/Catch
 const getStrainInfo = async (inputValue) => {
   const searchByNameUrl = "http://strainapi.evanbusse.com/jqekE0U/strains/search/name"
-  const url = `${searchByNameUrl}/${inputValue}` //Setting URL to ex. "url/blue dream"
+  const url = `${searchByNameUrl}/${inputValue}` //Setting URL to ex. "url/what the user types in"
   try {
     removeStrainSearch()
     const response = await axios.get(url)
@@ -32,12 +32,16 @@ const getEffects = async (id) => {
   try {
     const eResponse = await axios.get(effectsUrl)
     const medical = eResponse.data.medical //Traversing to the medical usage
-    const effectUL = document.querySelector(`#medical${id}`) //Selecting the UL
-    medical.forEach(medical => { //FOR EACH: create a list item and text node
-      const listItem = document.createElement('li') 
-      const effectsText = document.createTextNode(`Can aid with ${medical}`)
-      listItem.appendChild(effectsText) //Add the text node to our LI
-      effectUL.appendChild(listItem) //Add the LI to our effectUL we made above which is the UL
+    const effectUL = document.querySelector(`#medical${id}`)
+      const provideAid = document.createElement('h3')
+      const aidText = document.createTextNode("May provide aid for the following:")
+      provideAid.appendChild(aidText)
+      effectUL.appendChild(provideAid)//Selecting the UL we make in our displayStrainInfo function
+        medical.forEach(medical => { //FOR EACH: create a list item and text node
+          const listItem = document.createElement('li') 
+          const effectsText = document.createTextNode(`${medical}`)
+          listItem.appendChild(effectsText) //Add the text node to our LI
+          effectUL.appendChild(listItem) //Add the LI to our effectUL we made above which is the UL
     })
     return effectUL // Return our UL with the updated info after running through for each loop
   } catch (err) {
