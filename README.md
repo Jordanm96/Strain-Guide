@@ -85,6 +85,7 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 #### PostMVP  
 
 - Link additional query in my api that brings more info on strain (effects)
+- Include a function for null results (Just added this)
 - Include flavors of strains in my search results
 - Incorporate a dropdown/click event for our search results (display name of strain only, display additional info (effects) when strain is clicked)
 - Add additional API to search for nearby medical dispensaries
@@ -120,7 +121,7 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 | Create button to display medical results | H | 3hrs| hrs | 3hrs |
 | CSS breakpoint | H | 3hrs| hrs | 4hrs |
 | CSS button styling | H | 1hr| hrs | 2hrs |
-| CSS general styling | H | 8hrs| hrs | hrs |
+| CSS general styling | H | 8hrs| hrs | 10hrs |
 | Testing | H | 3hrs| hrs | 5hrs |
 | Total | H | 31.5hrs| hrs | hrs |
 

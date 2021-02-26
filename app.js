@@ -11,7 +11,7 @@ const getStrainInfo = async (inputValue) => {
     const grabData = response.data
     grabData.forEach(grabData => {
       displayStrainInfo(grabData) //This line fetches the name, species, and description. Also the ID that we use for the second api call
-        const button = document.querySelector(`#seeEffects${grabData.id}`) //Grab our medical button
+      const button = document.querySelector(`#seeEffects${grabData.id}`) //Grab our medical button
         button.addEventListener('click', (e) => {
           e.preventDefault()
           const effects = getEffects(grabData.id) //This is using the ID from first api call and adding it to this button (button#seeEffects${id})
@@ -22,10 +22,6 @@ const getStrainInfo = async (inputValue) => {
     return response
   } catch (err) {
     console.error(err)
-    // let errorMessage = document.createElement('h1')
-    // errorMessage.textContent = "There is no current info on this strain. Please enter another name and try again."
-    // let results = document.querySelector(".results-container")
-    // document.results.append(errorMessage)
   }
 }
 // getStrainInfo('blue dream')
@@ -48,6 +44,13 @@ const getEffects = async (id) => {
     console.error(err)
   }
 }
+
+// Function for onload age verification 
+window.addEventListener('load', (e) => {
+  function ageVerify() {
+    alert("Click OK if you are 21 years or older to proceed.");
+  } ageVerify()
+})
 
 // Append the strain data to the div ('.search-results')
 function displayStrainInfo(grabData) {
@@ -91,9 +94,18 @@ function removeStrainSearch() {
 }
 
 //I want a function so the button only runs once when clicked and won't work again after that
-// function removeMedical() {
-//   const medicalContainer = document.querySelector('#medical')
-//   while (medicalContainer.lastChild) {
-//     medicalContainer.removeChild(medicalContainer.lastChild)
-//   }
-// }
+function removeMedical() {
+  const medicalContainer = document.querySelector('#medical')
+  while (medicalContainer.lastChild) {
+    medicalContainer.removeChild(medicalContainer.lastChild)
+  }
+}
+
+// Function that will display a message if no result is found from inputValue
+
+  // If user input = grabData run displayStrainInfo(grabData) 
+      // else 
+      // let errorMessage = document.createElement('h1')
+    // errorMessage.textContent = "There is no current info on this strain. Please enter another name and try again."
+    // let results = document.querySelector(".results-container")
+    // document.results.append(errorMessage)
