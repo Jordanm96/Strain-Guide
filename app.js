@@ -69,6 +69,15 @@ searchBtn.addEventListener('click', (e) => {
   document.querySelector('input').value = ""
 })
 
+// Enter button event listener
+const userInput = document.querySelector('input')
+userInput.addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) { //keycode is deprecated? What is the better way to do this?
+    e.preventDefault();
+    document.getElementById("go").click()
+  }
+})
+
 // Remove the strain search from html
 function removeStrainSearch() {
   const strainContainer = document.querySelector('.results-container')
