@@ -63,6 +63,11 @@ body {
   font-family: 'Noticia Text', serif;
   font-size: 18px; 
 }
+.unfortunate {
+  text-align: left;
+  font-family: 'Noticia Text', serif;
+  font-size: 12px; 
+}
 #inputBox {
   padding: 6px;
   margin: 5px;
@@ -98,6 +103,7 @@ position: relative;
 text-align: center;
 bottom: 0;
 }
+
 button {
   padding: 5px;
   border-radius: 20%;

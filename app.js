@@ -83,7 +83,7 @@ searchBtn.addEventListener('click', (e) => {
 // Enter button event listener
 const userInput = document.querySelector('input')
 userInput.addEventListener("keyup", (e) => {
-  if (e.keyCode === 13) { //keycode is deprecated? What is the better way to do this?
+  if (e.keyCode === 13) { 
     e.preventDefault();
     document.getElementById("go").click()
   }
@@ -98,18 +98,32 @@ function removeStrainSearch() {
 }
 
 //I want a function so the button only runs once when clicked and won't work again after that
-function removeMedical() {
-  const medicalContainer = document.querySelector('#medical')
-  while (medicalContainer.lastChild) {
-    medicalContainer.removeChild(medicalContainer.lastChild)
-  }
-}
+// function removeMedical() {
+//   const medicalContainer = document.querySelector('#medical')
+//   while (medicalContainer.lastChild) {
+//     medicalContainer.removeChild(medicalContainer.lastChild)
+//   }
+// }
+
+
+// If/Else for description = null
+
+// if (`${grabData.id}` === null) {
+//   console.log("No description available")
+// }else {
+//   RUN THE DESCRIPTION LIKE USUAL
+// }
 
 // Function that will display a message if no result is found from inputValue
 
-  // If user input = grabData run displayStrainInfo(grabData) 
-      // else 
-      // let errorMessage = document.createElement('h1')
-    // errorMessage.textContent = "There is no current info on this strain. Please enter another name and try again."
+// If/Else for no results found @displayStraininfo(grabData)
+
+// if (displayStrainInfo(grabData) === null) {
+//   console.log("No results found. Please try again.")
+    // let errorMessage = document.createElement('h1')
+    // errorMessage.textContent = "No results found. Please try again."
     // let results = document.querySelector(".results-container")
     // document.results.append(errorMessage)
+// } else {
+//   IF WE GOT THE DATA, SHOW THE DATA
+// }
