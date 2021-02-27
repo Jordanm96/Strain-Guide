@@ -12,7 +12,7 @@ const getStrainInfo = async (inputValue) => {
     grabData.forEach(grabData => {
       displayStrainInfo(grabData) //This line fetches the name, species, and description. Also the ID that we use for the second api call
       const button = document.querySelector(`#seeEffects${grabData.id}`) //Grab our medical button
-        button.addEventListener('click', (e) => {
+      button.addEventListener('click', (e) => {
           e.preventDefault()
           const effects = getEffects(grabData.id) //This is using the ID from first api call and adding it to this button (button#seeEffects${id})
           const medicalUl = document.querySelector(`#medical${grabData.id}`) //Grab our UL (medical list) we made in displayStrainInfo function
@@ -56,6 +56,7 @@ window.addEventListener('load', (e) => {
   } ageVerify()
 })
 
+// Used this to prevent button from running more than once https://stackoverflow.com/questions/19053917/enable-the-button-to-be-clicked-only-to-once-exception/19053960
 // Append the strain data to the div ('.search-results')
 function displayStrainInfo(grabData) {
   const strainList = document.querySelector('.results-container')
@@ -64,7 +65,7 @@ function displayStrainInfo(grabData) {
     <h1 class = "strainName">${grabData.name}</h1>
     <h3 class = "race">Species: ${grabData.race}</h3>    
     <p class = "description"><strong>Description:</strong> ${grabData.desc}</p>
-    <button id="seeEffects${grabData.id}">Click here for medicinal use!</button>
+    <button  id="seeEffects${grabData.id}" onClick="this.disabled = true;">Click here for medicinal use!</button>
     <ul id = "medical${grabData.id}"></ul>
   </div>
   ` // Here we have to add grabData.id to the button and UL so that each button only goes with its specific ID.
