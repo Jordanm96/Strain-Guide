@@ -82,7 +82,7 @@ function displayStrainInfo(grabData) {
   // Here we have to add grabData.id to the button and UL so that each button only goes with its specific ID.
   resultsContainer.insertAdjacentHTML("beforeend", strainInfo)
 }
-// https://www.youtube.com/watch?v=v2tJ3nzXh8I&t=41s line 65 nullish coalescing (es7)
+// https://www.youtube.com/watch?v=v2tJ3nzXh8I&t=41s line 76 nullish coalescing (es7)
 // Event Listener for "GO" Button
 const goBtn = document.querySelector('#go')
 goBtn.addEventListener('click', (e) => {
