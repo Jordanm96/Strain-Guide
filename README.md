@@ -85,7 +85,7 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 #### PostMVP  
 
 - Link additional query in my api that brings more info on strain (effects)
-- Include a function for null results .Just added this
+- Include a function for null results
 - Include flavors of strains in my search results
 - Incorporate a dropdown/click event for our search results (display name of strain only, display additional info (effects) when strain is clicked)
 - Add age verification pop-up
@@ -101,7 +101,7 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 |Feb 23-24| Pseudocode / actual code | Complete
 |Feb 25| Initial Clickable Model  | Complete
 |Feb 25| MVP | Complete
-|Feb 26| PMVP/Finalize CSS | Incomplete
+|Feb 26| PMVP/Finalize CSS | Complete
 |March 1| Presentations | Incomplete
 
 ## Priority Matrix
@@ -115,7 +115,7 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 | Set up HTML | H | .5hrs| hrs | 1hrs |
 | Basic CSS skeleton | H | 2hrs| hrs | 2hrs |
 | Pseudocode/mapping JS | H | 1.5hrs| hrs | 2hrs |
-| Create error handling function with try/catch| H | 3hrs| hrs | 2hrs |
+| Create error handling function with try/catch| H | 3hrs| hrs | 4hrs |
 | Working with API| H | 2hrs| hrs | 3hrs |
 | Link additional search query using strain ID gathered from first API request to JS | H | 3hrs| hrs | 7hrs |
 | Add event listeners | H | 1.5hrs| hrs | 1.5hrs |
@@ -124,20 +124,37 @@ strainapi.evanbusse.com/API_KEY/strains/data/effects/STRAIN_ID
 | CSS button styling | H | 1hr| hrs | 2hrs |
 | CSS general styling | H | 8hrs| hrs | 10hrs |
 | Testing | H | 3hrs| hrs | 5hrs |
-| Total | H | 31.5hrs| hrs | hrs |
+| Total | H | 31.5hrs| hrs | 45hrs |
 
 ## Code Snippet
 
 ```
-function removeStrain() {
-  const strainContainer = document.querySelector('.strain-list')
-  while (strainContainer.lastChild) { //We are grabbing the 'lastChild' which is the strain we just looked up
-    strainContainer.removeChild(strainContainer.lastChild) //remove child is going to remove the LAST child from that strain container
-  }
-}
+ if (grabData.length >= 1) { //we set it to 1 because incorrect values give an array with a length of 0
+      grabData.forEach(grabData => {
+        displayStrainInfo(grabData) //This line fetches the name, species, and description. Also the ID that we use for the second api call
+        const button = document.querySelector(`#seeEffects${grabData.id}`) //Grab our medical button
+        button.addEventListener('click', (e) => {
+          e.preventDefault()
+          const effects = getEffects(grabData.id) //This is using the ID from first api call and adding it to this button (button#seeEffects${id})
+          const medicalUl = document.querySelector(`#medical${grabData.id}`) //Grab our UL (medical list) we made in displayStrainInfo function
+          medicalUl.insertHTML(effects) //Here we are inserting our effects variable, which runs the id through the get effects function, into that empty UL
+        })
+      })
+    } else {
+      const resultsContainer = document.querySelector('.results-container')
+      const noResults = `
+        <div id = "noData">
+        <h1>No results found. Please try again.</h1>
+        </div>
+      `
+      resultsContainer.innerHTML = noResults
+
+    }
 ```
 
 ## Change Log
 
 - Not using a dropdown effect, instead added a button to display medical use.
+- Flavors (pMVP) are irrelevant. Chose not to include
+
 

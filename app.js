@@ -73,7 +73,7 @@ function displayStrainInfo(grabData) {
   <div id = "strainStuff">
     <h1 class = "strainName">${grabData.name}</h1>
     <h3 class = "race">Species: ${grabData.race}</h3>    
-    <p class = "description"><strong>Description:</strong> ${grabData.desc ?? "No description found"}</p>
+    <p class = "description"><strong>Description:</strong> ${grabData.desc ?? "Unavailable"}</p>
     <button  id="seeEffects${grabData.id}" onClick="this.disabled = true;">Click here for medicinal use!</button>
     <ul id = "medical${grabData.id}"></ul>
   </div>
