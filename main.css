@@ -76,11 +76,21 @@ body {
 
 /* Results */
 .results-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   font-family: "Poppins", sans-serif;
   flex: 1;
   height: 100%;
   padding: 5px 20px 20px 20px;
 }
+
+#noData {
+  width: 100%;
+  text-align: center;
+
+}
+
 
 /* StrainStuff DIV */
 #strainStuff {
@@ -154,4 +164,5 @@ button:hover {
     font-size: 14px;
   }
 }
+
 
