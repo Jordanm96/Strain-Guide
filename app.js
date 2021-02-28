@@ -1,5 +1,3 @@
-//Endpoint for strain name, id, race, and description: http://strainapi.evanbusse.com/jqekE0U/strains/search/name
-//Endpoint for effects by id: http://strainapi.evanbusse.com/jqekE0U/strains/data/effects
 
 // Create Try/Catch
 const getStrainInfo = async (inputValue) => {
@@ -98,24 +96,29 @@ function removeStrainSearch() {
   }
 }
 
-//I want a function so the button only runs once when clicked and won't work again after that
-// function removeMedical() {
-//   const medicalContainer = document.querySelector('#medical')
-//   while (medicalContainer.lastChild) {
-//     medicalContainer.removeChild(medicalContainer.lastChild)
+// If/Else for description = null
+// function removeEmptyDescription() {
+//   const description = document.querySelector('.description') //from line 65 p we make
+//   const value = `${grabData.desc}`
+//   value.each(description, function (key, value)){
+//     if (value === "" || value === null) {
+//       delete description[key]
+//     } else {
+//       `${grabData.desc}`
+//     }
 //   }
 // }
 
+  // function removeEmptyDescription() {
+  //   const value = `${grabData.desc}`
+  //   if (value === null || value === "") {
+  //     const description = document.querySelector('.description')
+  //     description.insertHTML('No description available')
+  //   } else {
+  //     `${grabData.desc}`
+  //   }
+  // }
 
-// If/Else for description = null
-
-// if (`${grabData.id}` === null) {
-//   console.log("No description available")
-// }else {
-//   RUN THE DESCRIPTION LIKE USUAL
-// }
-
-// Function that will display a message if no result is found from inputValue
 
 // If/Else for no results found @displayStraininfo(grabData)
 
