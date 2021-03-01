@@ -4,7 +4,7 @@
 // I included a button to retrieve the info from my second API call so that the page would load faster and smoother
 // Each button gets paired with it's corresponding strain ID so that it only displays the correct strain info #seeEffects${grabData.id}
 const getStrainInfo = async (inputValue) => {
-  const searchByNameUrl = "http://strainapi.evanbusse.com/jqekE0U/strains/search/name"
+  const searchByNameUrl = "https://strainapi.evanbusse.com/jqekE0U/strains/search/name"
   const url = `${searchByNameUrl}/${inputValue}` 
   try {
     removeStrainSearch()
@@ -39,7 +39,7 @@ const getStrainInfo = async (inputValue) => {
 // Here, we need to select individual IDs acquired by our first API call and plug it into our second URL
 // Using this ID, I made a for each loop to gather the medical purposes per ID and append it to it's corresponding strain 
 const getEffects = async (id) => {
-  const effectsUrl = `http://strainapi.evanbusse.com/jqekE0U/strains/data/effects/${id}`
+  const effectsUrl = `https://strainapi.evanbusse.com/jqekE0U/strains/data/effects/${id}`
   try {
     const eResponse = await axios.get(effectsUrl)
     const medical = eResponse.data.medical //Traversing to the medical usage
