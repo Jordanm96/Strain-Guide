@@ -2,7 +2,7 @@
 
 ## Project Name
 
-[Medical Marijuna Strain Guide]()
+[Medical Marijuna Strain Guide](https://jordanm96.github.io/Medical-Marijuana-Strain-Guide/)
 
 ## Project Description
 
