@@ -44,7 +44,7 @@ body {
   height: 100vh;
 }
 
-.bothDivs{
+.containers{
   display: flex;
 }
 
@@ -58,16 +58,12 @@ body {
   border-radius: 1%;
   /* min-height: 100vh; */
 }
-.try{
+.instructions{
   text-align: left;
   font-family: 'Noticia Text', serif;
   font-size: 18px; 
 }
-.unfortunate {
-  text-align: left;
-  font-family: 'Noticia Text', serif;
-  font-size: 12px; 
-}
+
 #inputBox {
   padding: 6px;
   margin: 5px;
@@ -88,12 +84,11 @@ body {
 #noData {
   width: 100%;
   text-align: center;
-
 }
 
 
 /* StrainStuff DIV */
-#strainStuff {
+#strainContainer {
   padding: 20px;
   border: darkslateblue solid 7px;
   margin: 3px 0px;
@@ -137,7 +132,7 @@ button:hover {
     font-size: 15px;
   }
 /* Make the divs stack on top of each other */
-  .bothDivs{
+  .containers{
     flex-direction: column;
   }
 /* Adjust search bar so it stays inside our search-container */
@@ -153,7 +148,7 @@ button:hover {
     border-radius: 10%;
   }
 /* Make the directions look nice */
-  .try{
+  .instructions{
     text-align: center;
     justify-content: center;
     width: 100%;
